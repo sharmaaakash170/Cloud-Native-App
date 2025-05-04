@@ -1,0 +1,37 @@
+cloud-native-app/
+├── backend/
+│   ├── app/
+│   │   ├── main.py
+│   │   ├── requirements.txt
+│   │   ├── routers/
+│   │   └── services/
+│   └── Dockerfile
+│
+├── k8s/
+│   ├── base/
+│   │   └── namespace.yaml
+│   ├── backend/
+│   │   ├── deployment.yaml
+│   │   ├── service.yaml
+│   │   ├── hpa.yaml
+│   │   └── canary.yaml (managed by Flagger)
+│   ├── postgres/
+│   │   ├── deployment.yaml
+│   │   └── service.yaml
+│   ├── redis/
+│   │   ├── deployment.yaml
+│   │   └── service.yaml
+│   ├── ingress/
+│   │   └── ingress.yaml
+│   └── monitoring/
+│       ├── prometheus-config.yaml
+│       ├── prometheus-deployment.yaml
+│       └── grafana-deployment.yaml
+│
+├── jenkins/
+│   └── Jenkinsfile
+│
+├── scripts/
+│   └── init-db.sql
+│
+└── README.md
